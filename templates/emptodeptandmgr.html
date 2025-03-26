@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color:rgba(25, 113, 73, 0.4); /* Light background color for the table */
+        }
+        table {
+            background-color: rgba(25, 113, 73, 0.4); /* Semi-transparent green background */
+            width: 60%; /* Table width */
+            height: 20px;
+            border-collapse: collapse; /* Ensure no double borders */
+        }
+        th {
+            background-color: #007bff; /* Custom blue background color for the heading */
+            color: white; /* White text color for the header */
+            padding: 5px 15px; /* Padding inside header cells */
+            text-align: center; /* Center-align text */
+        }
+        td {
+            padding: 12px 15px; /* Padding inside data cells */
+            text-align: center; /* Center-align text */
+            border: 1px solid #ddd; /* Light gray border for table cells */
+        }
+        tr:hover {
+            background-color: #ddd; /* Hover effect on rows */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>EMPTODEPTANDMGR</h1>
+        <table border="3px">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>SAL</th>
+                <th>MGR</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+                <th>HIREDATE</th>
+
+                <th>DNAME</th>
+                <th>LOCATION</th>
+                <th>DEPTNO</th>
+
+                <th>Manager Emp No</th>
+                <th>Manager Name</th>
+                <th>Manager Salary</th>
+                <th>Manager Job</th>
+            </tr>
+
+            {% for QLED in QLEDMO %}
+                <tr>
+                    <td>{{QLED.empno}}</td>
+                    <td>{{QLED.ename}}</td> 
+                    <td>{{QLED.job}}</td>
+                    <td>{{QLED.sal}}</td>
+                    <td>{{QLED.mgr}}</td>
+                    <td>{{QLED.comm}}</td>
+                    <td>{{QLED.deptno.deptno}}</td>
+                    <td>{{QLED.hire_date}}</td>
+
+                    <td>{{QLED.deptno.dname}}</td>
+                    <td>{{QLED.deptno.location}}</td>
+                    <td>{{QLED.deptno.deptno}}</td>
+
+                    <td>{{QLED.mgr.empno}}</td>
+                    <td>{{QLED.mgr.ename}}</td>
+                    <td>{{QLED.mgr.sal}}</td>
+                    <td>{{QLED.mgr.job}}</td>
+                    
+                </tr>
+            {% endfor %}
+
+
+        </table>
+    </center>
+    
+</body>
+</html>

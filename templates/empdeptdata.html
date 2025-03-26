@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color:rgba(25, 113, 73, 0.4); /* Light background color for the table */
+        }
+        table {
+            background-color: rgba(25, 113, 73, 0.4); /* Semi-transparent green background */
+            width: 60%; /* Table width */
+            height: 20px;
+            border-collapse: collapse; /* Ensure no double borders */
+        }
+        th {
+            background-color: #007bff; /* Custom blue background color for the heading */
+            color: white; /* White text color for the header */
+            padding: 5px 15px; /* Padding inside header cells */
+            text-align: center; /* Center-align text */
+        }
+        td {
+            padding: 12px 15px; /* Padding inside data cells */
+            text-align: center; /* Center-align text */
+            border: 1px solid #ddd; /* Light gray border for table cells */
+        }
+        tr:hover {
+            background-color: #ddd; /* Hover effect on rows */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>EMPLOYEE DATA</h1>
+        <table border="2px">
+            <tr>
+                <th>EMPNO</th>
+                <th>ENAME</th>
+                <th>JOB</th>
+                <th>SAL</th>
+                <th>MGR</th>
+                <th>COMM</th>
+                <th>DEPTNO</th>
+                <th>HIREDATE</th>
+                <th>DNAME</th>
+                <th>LOCATION</th>
+                <th>DEPTNO</th>
+            </tr>
+
+            {% for edo in LEDO %}
+                <tr>
+                    <td>{{edo.empno}}</td>
+    
+                    <td>{{edo.ename}}</td>
+                    
+                    <td>{{edo.job}}</td>
+                    
+                    <td>{{edo.sal}}</td>
+                    
+                    <td>{{edo.mgr}}</td>
+                    
+                    <td>{{edo.comm}}</td>
+                    
+                    <td>{{edo.deptno}}</td>
+                    
+                    <td>{{edo.hire_date}}</td>
+
+                    <td>{{edo.deptno.dname}}</td>
+                    
+                    <td>{{edo.deptno.location}}</td>
+                    
+                    <td>{{edo.deptno.deptno}}</td>
+                </tr>
+            {% endfor %}
+
+
+        </table>
+    </center>
+    
+</body>
+</html>

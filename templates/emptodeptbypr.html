@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        {% for DO in QLDO %}
+        <h1>{{DO.dname}}</h1>
+            {% for EO  in DO.emp_set.all %}
+            <h2>{{EO.ename}}</h2>
+            <h2>{{EO.sal}}</h2>
+            <h2>{{EO.job}}</h2>
+            ------------------------------
+            {% endfor %}
+        {% endfor %}
+</body>
+</html>
