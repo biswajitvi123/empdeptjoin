@@ -19,10 +19,10 @@ from django.urls import path
 from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('empdeptdata/',empdeptdata,name='empdeptdata'),
+    path('emptodeptdata/',emptodeptdata,name='emptodeptdata'),
     path('dept/',dept,name='dept'),
     path('salgrade/',salgrade,name='salgrade'),
-    path('empmgrjoin/',empmgrjoin,name='empmgrjoin'),
+    path('emptomgrjoin/',emptomgrjoin,name='emptomgrjoin'),
     path('emptodeptandmgr/',emptodeptandmgr,name='emptodeptandmgr'),
     path('emptodeptbypr/',emptodeptbypr,name='emptodeptbypr'),
 
